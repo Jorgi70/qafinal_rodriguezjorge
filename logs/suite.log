@@ -1,0 +1,19 @@
+19:57:44 INFO TalentoTech Completando los Datos del USUARIO
+19:57:44 INFO TalentoTech Verficando redireccionamiento de la pagina
+19:58:07 INFO TalentoTech Completando los Datos del USUARIO
+2025-11-26 : 20:02:35 INFO TalentoTech: Completando los Datos del USUARIO
+2025-11-26 : 20:02:35 INFO TalentoTech: Verficando redireccionamiento de la pagina
+2025-11-26 : 20:02:57 INFO TalentoTech: Completando los Datos del USUARIO
+2025-11-26 : 20:40:37 INFO TalentoTech: realizando solicitud GET a https://reqres.in/api/users
+2025-11-26 : 20:40:38 INFO TalentoTech: Agregando usuario Jose
+2025-11-26 : 20:40:39 INFO TalentoTech: Eliminando el usuario /2
+2025-11-26 : 20:47:51 INFO TalentoTech: realizando solicitud GET a https://reqres.in/api/users
+2025-11-26 : 20:47:52 INFO TalentoTech: Eliminando el usuario /2
+2025-11-26 : 20:48:15 INFO TalentoTech: realizando solicitud GET a https://reqres.in/api/users
+2025-11-26 : 20:48:15 INFO TalentoTech: Eliminando el usuario /2
+2025-11-26 : 20:48:52 INFO TalentoTech: realizando solicitud GET a https://reqres.in/api/users
+2025-11-26 : 20:48:52 INFO TalentoTech: Agregando usuario: JoseProfesor
+2025-11-26 : 20:48:53 INFO TalentoTech: Eliminando el usuario /2
+2025-11-26 : 20:49:19 INFO TalentoTech: realizando solicitud GET a https://reqres.in/api/users
+2025-11-26 : 20:49:19 INFO TalentoTech: Agregando usuario: Jose, Profesor
+2025-11-26 : 20:49:20 INFO TalentoTech: Eliminando el usuario /2
