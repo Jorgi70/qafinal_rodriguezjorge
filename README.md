@@ -61,13 +61,17 @@ preentrega-rodriguezjorge/
 
     Asegúrate de tener Python instalado. Luego, instala las bibliotecas necesarias:
 ```
-pip install selenium
-pip install pytest
-pip install webdriver-manager
-pip install pytest-html
+selenium
+pytest
+webdriver-manager
+pytest-html
+pytest-check
+requests
+faker
+behave
 
 ```
-(Alternativamente, puedes usar ***pip install -r requirements.txt*** si se genera el archivo.)
+(Instalar todo con ***pip install -r requirements.txt*** )
 
 📊 **Reporte de Resultados**
 
