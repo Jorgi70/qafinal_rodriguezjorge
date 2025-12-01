@@ -25,13 +25,13 @@ Este proyecto de automatización de pruebas utiliza las siguientes tecnologías 
 | :--- | :--- |
 | **Python** | Lenguaje principal de programación utilizado para escribir todos los *scripts* de prueba, *fixtures* y la lógica de automatización. |
 | **Selenium** | Herramienta fundamental para la **automatización del navegador (Web UI)**. Permite simular interacciones de usuario (clics, ingresos de texto, navegación) en la aplicación web para realizar pruebas *end-to-end*. |
-| **`webdriver-manager`** | Librería crucial para la **gestión automática de los *drivers* del navegador**. Elimina la necesidad de descargar y configurar manualmente los *drivers*. |
-| **`requests`** | Se utiliza para realizar **peticiones HTTP** a APIs y *endpoints* del *backend*. Es esencial para las pruebas de servicios (API Testing). |
-| **`faker`** | Genera **datos de prueba realistas y aleatorios** (nombres, correos electrónicos, etc.) para las pruebas de formularios y simulación de usuarios. |
-| **`pytest`** | *Framework* principal para la **ejecución de pruebas**. Proporciona una estructura robusta para escribir, descubrir y ejecutar pruebas de manera eficiente. |
-| **`pytest-check`** | Extensión de `pytest` que permite **realizar múltiples aserciones** dentro de una misma prueba sin detener la ejecución tras la primera falla. |
-| **`pytest-html`** | *Plugin* de `pytest` que genera un **reporte de pruebas en formato HTML** legible y detallado después de cada ejecución. |
-| **`behave`** | *Framework* de **Desarrollo Guiado por Comportamiento (BDD)**. Se utiliza para escribir escenarios de prueba en lenguaje natural (Gherkin). |
+| **Webdriver-manager** | Librería crucial para la **gestión automática de los *drivers* del navegador**. Elimina la necesidad de descargar y configurar manualmente los *drivers*. |
+| **Requests** | Se utiliza para realizar **peticiones HTTP** a APIs y *endpoints* del *backend*. Es esencial para las pruebas de servicios (API Testing). |
+| **Faker** | Genera **datos de prueba realistas y aleatorios** (nombres, correos electrónicos, etc.) para las pruebas de formularios y simulación de usuarios. |
+| **Pytest** | *Framework* principal para la **ejecución de pruebas**. Proporciona una estructura robusta para escribir, descubrir y ejecutar pruebas de manera eficiente. |
+| **Pytest-check** | Extensión de `pytest` que permite **realizar múltiples aserciones** dentro de una misma prueba sin detener la ejecución tras la primera falla. |
+| **Pytest-html** | *Plugin* de `pytest` que genera un **reporte de pruebas en formato HTML** legible y detallado después de cada ejecución. |
+| **Behave** | *Framework* de **Desarrollo Guiado por Comportamiento (BDD)**. Se utiliza para escribir escenarios de prueba en lenguaje natural (Gherkin). |
 | **Git & GitHub** | Sistema de control de versiones y hosting del código fuente. |
 
 ## 📁 Estructura del Repositorio
