@@ -1,9 +1,11 @@
 from selenium.webdriver.common.by import By
+from pages.login_page import LoginPage
 from selenium import webdriver
 
-def test_productos(login_in_driver):
+def test_productos(login_in_driver,usuario,password):
     try:
-        driver = login_in_driver;
+        driver = login_in_driver
+        LoginPage(driver).login_completo(usuario,password)
         
         # Busco nuevamente todos los productos
         products = driver.find_elements(By.CLASS_NAME, "inventory_item");
@@ -34,5 +36,4 @@ def test_productos(login_in_driver):
     except Exception as e:
         print(f"El error fue: {e}");
         raise;
-    finally:
-        driver.quit();       
+        

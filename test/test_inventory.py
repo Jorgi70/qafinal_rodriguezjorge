@@ -1,14 +1,16 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from pages.inventory_page import InventoryPage
+from pages.login_page import LoginPage
 import pytest
 
 @pytest.mark.parametrize("usuario,password",
                          [("standard_user","secret_sauce")])
-def test_inventory(login_in_driver):
+def test_inventory(login_in_driver,usuario,password):
     try:
         
-        driver = login_in_driver;
+        driver = login_in_driver
+        LoginPage(driver).login_completo(usuario,password)
         inventory_page = InventoryPage(driver)
         
         #Verificar los productos
@@ -27,5 +29,4 @@ def test_inventory(login_in_driver):
     except Exception as e:
         print(f"El error fue: {e}");
         raise;
-    finally:
-        driver.quit();
+  

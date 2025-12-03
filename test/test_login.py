@@ -10,6 +10,7 @@ from util.logger import logger
 def test_login_validation(login_in_driver,usuario,password,debe_funcionar):
   logger.info("Completando los Datos del USUARIO")
   driver = login_in_driver
+  LoginPage(driver).login_completo(usuario,password)
         
   if debe_funcionar == True:
     logger.info("Verficando redireccionamiento de la pagina")

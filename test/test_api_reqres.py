@@ -2,10 +2,10 @@ import pytest
 import requests
 from util.logger import logger
 
-# Obtener usuario
+# OBTENER USUARIO
 def test_get_user(url_base,api_key):
     
-    # OBTENER USUARIO
+    
     url = f"{url_base}/2"
     logger.info(f"realizando solicitud GET a {url_base}")
     response = requests.get(url,headers=api_key)

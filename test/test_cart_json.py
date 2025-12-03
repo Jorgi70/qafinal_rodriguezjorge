@@ -3,6 +3,7 @@ from selenium import webdriver
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
 from util.lector_jason import leer_json_productos
+from pages.login_page import LoginPage
 import pytest
 
 RUTA_JSON = "datos/productos.json"
@@ -13,7 +14,8 @@ RUTA_JSON = "datos/productos.json"
 def test_cart_json(login_in_driver,usuario,password,nombre_producto):
     try:
         
-        driver = login_in_driver;
+        driver = login_in_driver
+        LoginPage(driver).login_completo(usuario,password)
         inventory_page = InventoryPage(driver)
         
         #agregar al carrito el producto
