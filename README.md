@@ -17,15 +17,21 @@ Se han cubierto los siguientes escenarios de usuario:
 | **Inventario** | Validación de Interfaz | Comprobar el título de la página y la presencia de productos y elementos clave (filtros, menú). |
 | **Carrito** | Interacción con Productos | Añadir un producto, validar el incremento del contador del carrito y confirmar su presencia en la vista del carrito. |
 
-## 🛠️ Tecnologías y Herramientas
+## 💻 Tecnologías Usadas
 
-| Tecnología | Rol en el Proyecto |
+Este proyecto de automatización de pruebas utiliza las siguientes tecnologías y librerías clave, todas basadas en el ecosistema **Python**:
+
+| Tecnología | Propósito en el Proyecto |
 | :--- | :--- |
-| **Python** | Lenguaje de programación principal para la escritura de los *tests*. |
-| **Selenium WebDriver** | Herramienta para la interacción y automatización de las acciones del navegador. |
-| **Pytest** | Framework de pruebas unitarias utilizado para la ejecución estructurada de los casos de prueba. |
-| **WebDriver Manager** | Gestión automática de los *drivers* del navegador (ej. ChromeDriver). |
-| **Pytest-HTML** | Generación de reportes detallados en formato HTML. |
+| **Python** | Lenguaje principal de programación utilizado para escribir todos los *scripts* de prueba, *fixtures* y la lógica de automatización. |
+| **Selenium** | Herramienta fundamental para la **automatización del navegador (Web UI)**. Permite simular interacciones de usuario (clics, ingresos de texto, navegación) en la aplicación web para realizar pruebas *end-to-end*. |
+| **Webdriver-manager** | Librería crucial para la **gestión automática de los *drivers* del navegador**. Elimina la necesidad de descargar y configurar manualmente los *drivers*. |
+| **Requests** | Se utiliza para realizar **peticiones HTTP** a APIs y *endpoints* del *backend*. Es esencial para las pruebas de servicios (API Testing). |
+| **Faker** | Genera **datos de prueba realistas y aleatorios** (nombres, correos electrónicos, etc.) para las pruebas de formularios y simulación de usuarios. |
+| **Pytest** | *Framework* principal para la **ejecución de pruebas**. Proporciona una estructura robusta para escribir, descubrir y ejecutar pruebas de manera eficiente. |
+| **Pytest-check** | Extensión de `pytest` que permite **realizar múltiples aserciones** dentro de una misma prueba sin detener la ejecución tras la primera falla. |
+| **Pytest-html** | *Plugin* de `pytest` que genera un **reporte de pruebas en formato HTML** legible y detallado después de cada ejecución. |
+| **Behave** | *Framework* de **Desarrollo Guiado por Comportamiento (BDD)**. Se utiliza para escribir escenarios de prueba en lenguaje natural (Gherkin). |
 | **Git & GitHub** | Sistema de control de versiones y hosting del código fuente. |
 
 ## 📁 Estructura del Repositorio
@@ -61,13 +67,17 @@ preentrega-rodriguezjorge/
 
     Asegúrate de tener Python instalado. Luego, instala las bibliotecas necesarias:
 ```
-pip install selenium
-pip install pytest
-pip install webdriver-manager
-pip install pytest-html
+selenium
+pytest
+webdriver-manager
+pytest-html
+pytest-check
+requests
+faker
+behave
 
 ```
-(Alternativamente, puedes usar ***pip install -r requirements.txt*** si se genera el archivo.)
+(Instalar todo con ***pip install -r requirements.txt*** )
 
 📊 **Reporte de Resultados**
 
