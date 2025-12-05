@@ -52,5 +52,5 @@ class InventoryPage:
             contador_carrito = self.driver.find_element(*self._CART_COUNT)
             return int(contador_carrito.text)
         except:
-            return 
+            return 0
          

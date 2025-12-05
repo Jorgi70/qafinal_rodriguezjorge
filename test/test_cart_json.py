@@ -33,5 +33,4 @@ def test_cart_json(login_in_driver,usuario,password,nombre_producto):
     except Exception as e:
         print(f"El error fue: {e}");
         raise;
-    finally:
-        driver.quit();
+   

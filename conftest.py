@@ -3,6 +3,8 @@ from selenium import webdriver
 from utils import login
 from pages.login_page import LoginPage
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from datetime import datetime
 import time
 
@@ -14,16 +16,27 @@ target.mkdir(parents=True, exist_ok=True)
 
 @pytest.fixture
 def driver():
-    options = Options()
+    # Configuración de Chrome
+    options = webdriver.ChromeOptions()
+
+    # Desactivar el administrador de contraseñas y el aviso de seguridad de Google
+    prefs = {
+        "credentials_enable_service": False,
+        "profile.password_manager_enabled": False
+    }
+    options.add_experimental_option("prefs", prefs)
+
+    # Opcional: abrir Chrome en modo incógnito (evita datos guardados previos)
     options.add_argument("--incognito")
-    driver = webdriver.Chrome()
-    driver.implicitly_wait(7)
+
+    driver= webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     yield driver
     driver.quit()
+
     
 # Aca llamaos a la CLASE 
 @pytest.fixture
-def login_in_driver(driver,usuario,password):
+def login_in_driver(driver):
    #LoginPage(driver).abrir_pagina().login_completo(usuario,password) Borramos para los screenshot
    LoginPage(driver).abrir_pagina()
    return driver
