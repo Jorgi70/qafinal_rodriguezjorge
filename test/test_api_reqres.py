@@ -2,6 +2,7 @@ import pytest
 import requests
 from util.logger import logger
 
+@pytest.mark.skipif("se vencio el ApiKey")
 # OBTENER USUARIO
 def test_get_user(url_base,api_key):
     
@@ -18,7 +19,7 @@ def test_get_user(url_base,api_key):
     
 
 # CREAR USUARIO
-    
+@pytest.mark.skipif("se vencio el ApiKey")    
 def test_create_user(url_base,api_key):
         
         payload = {
@@ -36,7 +37,7 @@ def test_create_user(url_base,api_key):
 
 
 # ELIMINAR USUARIO
-
+@pytest.mark.skipif("se vencio el ApiKey")
 def test_delete_user(url_base,api_key):
     logger.info("Eliminando el usuario /2")
     response = requests.delete(f"{url_base}/2", headers=api_key)
