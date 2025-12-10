@@ -31,7 +31,7 @@ jobs:
                 
            # 4 Instalar depedencias
            - name: Instalar depedencia
-             run: pip intall -r requirements.txt
+             run: pip install -r requirements.txt
              
            # 5 Ejecutar Runtest
            - name: Runtest
