@@ -62,3 +62,9 @@
 2025-12-05 : 16:35:32 INFO TalentoTech: realizando solicitud GET a https://reqres.in/api/users
 2025-12-05 : 16:35:33 INFO TalentoTech: Agregando usuario: Jose, Profesor
 2025-12-05 : 16:35:34 INFO TalentoTech: Eliminando el usuario /2
+2025-12-05 : 18:50:42 INFO TalentoTech: Completando los Datos del USUARIO
+2025-12-05 : 18:50:43 INFO TalentoTech: Verficando redireccionamiento de la pagina
+2025-12-05 : 18:51:06 INFO TalentoTech: Completando los Datos del USUARIO
+2025-12-05 : 18:52:12 INFO TalentoTech: realizando solicitud GET a https://reqres.in/api/users
+2025-12-05 : 18:52:14 INFO TalentoTech: Agregando usuario: Jose, Profesor
+2025-12-05 : 18:52:15 INFO TalentoTech: Eliminando el usuario /2

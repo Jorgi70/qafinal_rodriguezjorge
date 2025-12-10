@@ -1,4 +1,9 @@
-# Automatización QA - Flujos de `saucedemo.com`
+# Proyecto de Automatizaci0n de Pruebas QA con Selenium y Pytest
+
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
+![Selenium](https://img.shields.io/badge/Selenium-4.x-green.svg)
+![Pytest](https://img.shields.io/badge/Pytest-7.x-purple.svg)
+![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 
 
 ## 📄 Descripción General del Proyecto
