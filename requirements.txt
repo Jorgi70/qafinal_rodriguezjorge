@@ -2,3 +2,5 @@ pip install selenium
 pip install pytest
 pip install webdriver-manager
 pip install pytest-html
+pip install faker
+pip install request
