@@ -89,10 +89,8 @@ selenium
 pytest
 webdriver-manager
 pytest-html
-pytest-check
 requests
 faker
-behave
 
 ```
 (Instalar todo con ***pip install -r requirements.txt*** )
