@@ -1,9 +1,10 @@
-# Proyecto de Automatizaci0n de Pruebas QA con Selenium y Pytest
+# Proyecto de Automatizacion de Pruebas QA con Selenium y Pytest
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
 ![Selenium](https://img.shields.io/badge/Selenium-4.x-green.svg)
 ![Pytest](https://img.shields.io/badge/Pytest-7.x-purple.svg)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
+
 
 
 ## 📄 Descripción General del Proyecto
@@ -44,18 +45,30 @@ Este proyecto de automatización de pruebas utiliza las siguientes tecnologías 
 La organización del proyecto se adhiere a una estructura modular para facilitar la escalabilidad y el mantenimiento:
 
 ```
-preentrega-rodriguezjorge/ 
-├── test/ 
-│     ├── test_login.py         # Pruebas relacionadas con el Login. 
-│     ├── test_inventory.py     # Pruebas de Inventario y Elementos. 
-│     └── test_productos.py     # Pruebas de Carrito y Flujo de Productos.
-│ 
-├── utils.py                # Funciones Login (Inicialización de Chrome/Driver). 
-├── conftest.py             # Hooks de Pytest, fixtures. 
-├── report.html             # Reporte final generado por pytest. 
-├── README.md               # Describe las funcionalidades del programa. 
-├── run_tests.py            # Archivo main para la ejecución de los tests. 
-└── requirements.txt        # Listado de dependencias del proyecto.
+/
+├── test/                   # Contiene todos los scripts de pruebas (UI y API)
+│   ├── test_login.py
+│   ├── test_inventory.py
+│   ├── test_cart.py
+│   └── test_api_reqres.py
+│
+├── pages/                  # Implementación del Page Object Model (POM)
+│   ├── login_page.py
+│   ├── inventory_page.py
+│   └── cart_page.py
+│
+├── datos/                  # Datos de prueba externos
+│   ├── data_login.csv
+│   └── productos.json
+│
+├── reports/                # Almacena capturas de pantalla de pruebas fallidas
+│
+├── util/                   # Módulos de utilidades (logger, lector de datos)
+│
+├── conftest.py             # Fixtures y hooks globales de Pytest
+├── run_tests.py            # Script para ejecutar la suite de pruebas
+├── requirements.txt        # Dependencias del proyecto
+└── README.md               # Documentación del proyecto
 ```
 
 ⚙️ Configuración e Instalación
@@ -84,16 +97,52 @@ behave
 ```
 (Instalar todo con ***pip install -r requirements.txt*** )
 
-📊 **Reporte de Resultados**
+## Reportes y Logs
 
-Tras la ejecución, el reporte report.html contendrá un resumen ejecutivo de la corrida de pruebas, incluyendo:
+El proyecto genera tres tipos principales de resultados durante la ejecucion de las prubas: **reporte HTML**, **capturas de pantalla**, **archivo de log**
 
-Detalle de los casos de prueba ejecutados.
+### Reporte HTML
+Se genera un reporte HTML detallado con el nombre de ```reporte.hmtl``` en la **carpeta raiz** del proyecto
 
-Resultado de cada prueba (Éxito passed o Falla failed).
+### Logs de ejecución
+Tambien se genera un log con informacion detallada de toda la ejecución de las pruebas en la siguiente ubicacion: ```logs/suite.log```
 
-Duración de la ejecución.
+### Capturas de pantalla
 
-🎯 **Proyección y Mejoras** (Próximos Pasos)
+Se realizan capturas de pantalla por cada test que haya fallado y se encuentran en la siguiente ubicacion: ```reports/screens/```
 
-El proyecto está diseñado para ser la base de la entrega final. Las futuras mejoras planeadas
+## Ejuctar todas las pruebas
+Para iniciar la ejecucion de las pruebas debes ejecutar la siguiente linea:
+
+```bash
+python -m run_test.py
+```
+
+## ¿Como interpretar los reportes?
+- Al ejecutar `run_test.py`, se genera un archivo HTML en la carpeta raiz.
+- El reporte incluye:
+    - Lista completa de test ejecutados
+    - El estado de cada prueba
+    - La duracion de cada test
+    - Las capturas de pantalla para pruebas fallidas
+
+## Pruebas incluidas
+- Login exitoso y fallido
+- Login exitoso y fallido usando faker
+- Comportamiento de la pagina de inventario
+- Comportamiento de la pagina del carrito
+- API (Reqres): GET users, POST create user, DELETE user, validaciones de codigos HTTP, validaciones de estructura JSON
+
+## Manejo de datos de prueba
+- En la carpeta `datos` se incluyen archivos como:
+    - `data_login.csv` -> datos de usuarios validos o invalidos
+    - `productos.json` -> datos de productos para validacion
+
+### Conclusion
+Este proyecto ofrece una estructura organizada y escalable para automatizar pruebas de API utilizando Python y Pytest. Incluye un flujo simple de ejeucion mediante `run_test.py`, generacion automatica de reporte HTML facilitando el analisis de las pruebas.
+
+La arquitectura del proyecto esta pensada para agregar nuevos casos de prueba y configuraciones sin modificar el nucleo del proyecto, manteniendo buenas practicas y permitiendo su escalabilidad en el tiempo.
+
+
+## 📄 Licencia
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
