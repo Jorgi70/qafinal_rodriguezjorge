@@ -28,13 +28,18 @@ def driver():
 
     # Opcional: abrir Chrome en modo incógnito (evita datos guardados previos)
     options.add_argument("--incognito")
-
+    # Argumentos para Github
+    options.add_argument("--no-sandbox") 
+    options.add_argument("disable-gpu")
+    options.add_argument("--window-size=1920,1080")
+    options.add_argument("--headless=new") 
+    
     driver= webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     yield driver
     driver.quit()
 
     
-# Aca llamaos a la CLASE 
+
 @pytest.fixture
 def login_in_driver(driver):
    #LoginPage(driver).abrir_pagina().login_completo(usuario,password) Borramos para los screenshot
