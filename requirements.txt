@@ -3,4 +3,4 @@ pytest
 webdriver-manager
 pytest-html
 faker
-request
+requests
